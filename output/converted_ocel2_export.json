@@ -1,0 +1,110 @@
+{
+  "objectTypes": [
+    {
+      "name": "Vorgang",
+      "attributes": []
+    }
+  ],
+  "eventTypes": [
+    {
+      "name": "Antrag eingegangen",
+      "attributes": [
+        "processtype",
+        "resource"
+      ]
+    },
+    {
+      "name": "Pr\u00fcfung erfolgt",
+      "attributes": [
+        "processtype",
+        "resource"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "123",
+      "type": "Vorgang",
+      "attributes": [
+        {
+          "name": "bundesland",
+          "value": "NRW"
+        },
+        {
+          "name": "stufe",
+          "value": "1"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "verlinkt",
+          "target": "456"
+        }
+      ]
+    },
+    {
+      "id": "456",
+      "type": "Vorgang",
+      "attributes": [
+        {
+          "name": "bundesland",
+          "value": "BY"
+        },
+        {
+          "name": "stufe",
+          "value": "2"
+        }
+      ],
+      "relationships": []
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "activity": "Antrag eingegangen",
+      "timestamp": "2022-10-01T10:00:00Z",
+      "attributes": [
+        {
+          "name": "processtype",
+          "value": "Typ A"
+        },
+        {
+          "name": "resource",
+          "value": "MitarbeiterX"
+        }
+      ],
+      "ocel:relations": {
+        "Vorgang": [
+          "123"
+        ]
+      }
+    },
+    {
+      "id": "e2",
+      "activity": "Pr\u00fcfung erfolgt",
+      "timestamp": "2022-10-01T10:30:00Z",
+      "attributes": [
+        {
+          "name": "processtype",
+          "value": "Typ B"
+        },
+        {
+          "name": "resource",
+          "value": "MitarbeiterY"
+        }
+      ],
+      "ocel:relations": {
+        "Vorgang": [
+          "456"
+        ]
+      }
+    }
+  ],
+  "ocel:relations": [
+    {
+      "ocel:source": 123,
+      "ocel:target": 456,
+      "ocel:relation_type": "example_relation"
+    }
+  ]
+}
