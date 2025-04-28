@@ -1,6 +1,5 @@
 = Projektbericht: OCELConverter
-Autor: [Dein Name]
-Datum: 27.04.2025
+
 
 == Projektübersicht
 Ziel des Projekts war es, ein Python-basiertes Tool zu entwickeln, das CSV-Dateien ins OCEL 2.0-Format konvertiert. Dadurch sollen die Daten besser für Process Mining und Analysen nutzbar sein.
@@ -10,6 +9,7 @@ Ziel des Projekts war es, ein Python-basiertes Tool zu entwickeln, das CSV-Datei
 * Konvertierung der Daten in das OCEL 2.0-Format
 * Speicherung als JSON-Datei
 * Importierbarkeit in ProM zur weiteren Analyse
+* Lieferung des Microservices in einem Docker-Container
 
 == Anforderungen
 * CSV-Dateien sollen korrekt eingelesen werden.
@@ -31,23 +31,25 @@ Da die Projektanforderungen von Anfang an klar definiert waren und sich während
 . Speicherung der verarbeiteten Daten in einer OCEL 2.0-konformen JSON-Datei
 . Import der JSON-Datei in ProM getestet und erfolgreich abgeschlossen
 
+==  Lieferung des Microservices in einem lauffähigen Container
 * Im Rahmen der Projektumsetzung wurde der entwickelte Microservice, welcher CSV-Dateien ins OCEL 2.0-Format konvertiert, erfolgreich in einem lauffähigen Docker-Container bereitgestellt.
 
 
 == Ergebnis
-Die erzeugte Datei `converted_ocel2_export.json` enthält:
+* Die erzeugte Datei `converted_ocel2_export.json` enthält:
 * objectTypes
-* eventTypes
-* objects (mit Attributen)
-* events (mit Zeitstempeln und Relationen)
-* ocel:relations (zwischen Objekten)
-
-Der Import in ProM war erfolgreich und die strukturierte Anzeige der Events und Objekte bestätigt die Einhaltung des OCEL 2.0-Standards.
+- eventTypes
+- objects (mit Attributen)
+- events (mit Zeitstempeln und Relationen)
+- ocel:relations (zwischen Objekten)
+* Der Import in ProM war erfolgreich und die strukturierte Anzeige der Events und Objekte bestätigt die Einhaltung des OCEL 2.0-Standards.
+* Der Microservice ist in einem Docker-Container verfügbar.
 
 == Fazit und Ausblick
 Das Projektziel wurde vollständig erreicht. Die Implementierung des Konverters verlief erfolgreich, und die erzeugte Datei ist für die Prozessanalyse geeignet.
 
 **Zukünftige Verbesserungsmöglichkeiten:**
+
 * Unterstützung verschiedener CSV-Formate
 * Erweiterung um komplexere Relationen
 * Direkter Export in XES-Format
