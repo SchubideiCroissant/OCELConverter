@@ -17,6 +17,7 @@ Ziel des Projekts war es, ein Python-basiertes Tool zu entwickeln, das CSV-Datei
 * Speicherung im OCEL 2.0-konformen JSON-Format.
 * Die Ausgabe muss in ProM importierbar sein.
 * Strukturierter und wartbarer Python-Quellcode.
+* Liefern Sie den Microservice nach Möglichkeit in einem lauffähigen Container!
 
 == Vorgehensmodell
 * **Modell:** Klassisches Wasserfallmodell
@@ -30,9 +31,7 @@ Da die Projektanforderungen von Anfang an klar definiert waren und sich während
 . Extraktion der Objekte, Events und Relationen mittels pandas und json
 . Speicherung der verarbeiteten Daten in einer OCEL 2.0-konformen JSON-Datei
 . Import der JSON-Datei in ProM getestet und erfolgreich abgeschlossen
-
-==  Lieferung des Microservices in einem lauffähigen Container
-* Im Rahmen der Projektumsetzung wurde der entwickelte Microservice, welcher CSV-Dateien ins OCEL 2.0-Format konvertiert, erfolgreich in einem lauffähigen Docker-Container bereitgestellt.
+. Im Rahmen der Projektumsetzung wurde der entwickelte Microservice, welcher CSV-Dateien ins OCEL 2.0-Format konvertiert, erfolgreich in einem lauffähigen Docker-Container bereitgestellt.
 
 
 == Ergebnis
