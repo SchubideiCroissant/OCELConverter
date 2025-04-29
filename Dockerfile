@@ -1,14 +1,12 @@
-# Basis-Image: Python 3.11
 FROM python:3.11-slim
 
-# Arbeitsverzeichnis im Container erstellen
 WORKDIR /app/src
 
-# Lokale Dateien in das Arbeitsverzeichnis kopieren
 COPY src/ .
+COPY requirements.txt .
 
-# Notwendige Python-Bibliotheken installieren
-RUN pip install pandas
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Befehl, der beim Starten des Containers ausgeführt wird
-CMD ["python", "ocel_converter_final.py"]
+EXPOSE 8000
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
