@@ -75,9 +75,9 @@ Diese werden beim Docker-Build automatisch installiert.
 
 Dieses Projekt wurde erstellt von:
 
-- **Arthur Mehlgarten ** – [@SchubideiCroissant](https://github.com/SchubideiCroissant)
-- ** Anne Panzer ** – [@annedoesstuff](https://github.com/annedoesstuff)
-- **Equal* – [@2ealqada](https://github.com/2ealqada)
-- **Vincent Schick* – [@Qbito-3](https://github.com/2ealqada)
+- *Arthur Mehlgarten*  – [@SchubideiCroissant](https://github.com/SchubideiCroissant)
+- *Anne Panzer*  – [@annedoesstuff](https://github.com/annedoesstuff)
+- *Equal* – [@2ealqada](https://github.com/2ealqada)
+- *Vincent Schick* – [@Qbito-3](https://github.com/2ealqada)
 
 
