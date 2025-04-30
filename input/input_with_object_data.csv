@@ -1,3 +1,0 @@
-caseid,eventid,processtype,starttime,completiontime,activity,resource,object_type,object_attributes,object_relationships
-123,e1,Typ A,2022-10-01T09:00:00Z,2022-10-01T10:00:00Z,Antrag eingegangen,MitarbeiterX,Vorgang,"{'bundesland': 'NRW', 'stufe': '1'}","[{'type': 'verlinkt', 'target': '456'}]"
-456,e2,Typ B,2022-10-01T10:01:00Z,2022-10-01T10:30:00Z,Prüfung erfolgt,MitarbeiterY,Vorgang,"{'bundesland': 'BY', 'stufe': '2'}",[]
