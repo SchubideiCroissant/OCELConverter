@@ -12,6 +12,7 @@ def read_events_from_csv(file_path: str) -> List[Dict]:
     return events
 
 
+
 def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict[str, Dict], Set[str], Set[str]]:
     event_types = set()
     object_types = set()
