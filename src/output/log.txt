@@ -1,0 +1,10 @@
+Mapping verwendet: True
+Mapping-Daten: {
+  "Object1": [
+    "Resource 1234",
+    "Resource 5678"
+  ],
+  "Object2": [
+    "Resource 9999"
+  ]
+}
