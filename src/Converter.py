@@ -53,6 +53,7 @@ def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict
                             "relationships": []
                         }
                     relationships.append({"objectId": obj_key, "qualifier": obj_type})
+                    object_types.add(obj_type)  
 
         # Case Object
         case_id = row.get("caseid", "").strip()
