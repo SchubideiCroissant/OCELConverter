@@ -1,0 +1,16 @@
+{
+  "objects": [
+    {
+      "id": "Object1",
+      "resource": "Resource 1234"
+    },
+    {
+      "id": "Object1",
+      "resource": "Resource 5678"
+    },
+    {
+      "id": "Object2",
+      "resource": "Resource 9999"
+    }
+  ]
+}

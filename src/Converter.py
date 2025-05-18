@@ -2,6 +2,13 @@ import csv
 import json
 from typing import List, Dict, Tuple, Set
 
+# Mapping Data
+mapping_data = {}
+
+# Funktion zum Setzen des Mappings
+def set_mapping(mapping: Dict[str, list]):
+    global mapping_data
+    mapping_data = mapping
 
 def read_events_from_csv(file_path: str) -> List[Dict]:
     events = []
@@ -11,16 +18,21 @@ def read_events_from_csv(file_path: str) -> List[Dict]:
             events.append(row)
     return events
 
-
-
 def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict[str, Dict], Set[str], Set[str]]:
     event_types = set()
     object_types = set()
     events_output = []
     objects_output = {}
+    unique_ids = set()
 
     for row in event_list:
         evt_id = row["eventid"]
+
+        # Überprüfung auf eindeutige eventID
+        if evt_id in unique_ids:
+            raise ValueError(f"Doppelte eventID gefunden: {evt_id}")
+        unique_ids.add(evt_id)
+
         evt_type = row["activity"]
         evt_time = row["completiontime"]
 
@@ -28,34 +40,50 @@ def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict
 
         relationships = []
 
-        # Case Object
-        case_id = row["caseid"]
-        case_type = row["processtype"] or "Case"
-        object_types.add(case_type)
-        if case_id not in objects_output:
-            objects_output[case_id] = {
-                "id": case_id,
-                "type": case_type,
-                "attributes": [],
-                "relationships": []
-            }
-        relationships.append({"objectId": case_id, "qualifier": "case"})
+        # Mapping Objects
+        for obj_type, ids in mapping_data.items():
+            for obj_id in ids:
+                if obj_id in row.values():
+                    obj_key = f"{obj_type}_{obj_id}"
+                    if obj_key not in objects_output:
+                        objects_output[obj_key] = {
+                            "id": obj_key,
+                            "type": obj_type,
+                            "attributes": [],
+                            "relationships": []
+                        }
+                    relationships.append({"objectId": obj_key, "qualifier": obj_type})
+                    object_types.add(obj_type)  
 
-        # Resource Object
-        res_id = row.get("resource")
-        if res_id:
-            res_type = "Resource"
-            object_types.add(res_type)
-            obj_id_res = f"res_{res_id}"
-            if obj_id_res not in objects_output:
-                objects_output[obj_id_res] = {
-                    "id": obj_id_res,
-                    "type": res_type,
+        # Case Object
+        case_id = row.get("caseid", "").strip()
+        if case_id:
+            case_key = case_id
+            if case_key not in objects_output:
+                objects_output[case_key] = {
+                    "id": case_key,
+                    "type": "Case",
                     "attributes": [],
                     "relationships": []
                 }
-            relationships.append({"objectId": obj_id_res, "qualifier": "resource"})
+            relationships.append({"objectId": case_key, "qualifier": "case"})
+            object_types.add("Case")
 
+        # Resource Object
+        res_id = row.get("resource", "").strip()
+        if res_id:
+            res_key = f"res_{res_id}"
+            if res_key not in objects_output:
+                objects_output[res_key] = {
+                    "id": res_key,
+                    "type": "Resource",
+                    "attributes": [],
+                    "relationships": []
+                }
+            relationships.append({"objectId": res_key, "qualifier": "resource"})
+            object_types.add("Resource")
+
+        # Event-Eintrag
         event_entry = {
             "id": evt_id,
             "type": evt_type,
@@ -66,7 +94,6 @@ def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict
         events_output.append(event_entry)
 
     return events_output, objects_output, event_types, object_types
-
 
 def build_ocel_json_structure(events_output: List[Dict], objects_output: Dict[str, Dict],
                               event_types: Set[str], object_types: Set[str]) -> Dict:
@@ -79,7 +106,6 @@ def build_ocel_json_structure(events_output: List[Dict], objects_output: Dict[st
         "events": events_output,
         "objects": list(objects_output.values())
     }
-
 
 def write_output_files(ocel_data: Dict, log_path: str, json_path: str) -> None:
     with open(json_path, 'w', encoding='utf-8') as jf:
@@ -103,14 +129,3 @@ def write_output_files(ocel_data: Dict, log_path: str, json_path: str) -> None:
 
 # === Main Routine ===
 
-csv_file = r"C:\Users\vince\PycharmProjects\OCELConverter\input\input.csv"
-json_output_path = r"C:\Users\vince\PycharmProjects\OCELConverter\output\events_ocel.json"
-log_output_path = r"C:\Users\vince\PycharmProjects\OCELConverter\output\conversion_log.txt"
-
-
-event_list = read_events_from_csv(csv_file)
-events_output, objects_output, event_types, object_types = extract_events_and_objects(event_list)
-ocel_json = build_ocel_json_structure(events_output, objects_output, event_types, object_types)
-write_output_files(ocel_json, log_output_path, json_output_path)
-
-print("OCEL-JSON Datei und Log-Datei wurden erfolgreich erstellt.")

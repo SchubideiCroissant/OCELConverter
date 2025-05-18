@@ -1,0 +1,6 @@
+Konvertierte Events: 238
+Konvertierte Objekte: 44
+Event-Typen (distinct): 19 - Ablehnungsbescheinigung zustellen, Aktenzeichen hinzufügen, Antrag eingegangen, Bescheid zustellen, Bescheinigung zustellen, Datei hinzufügen, Externe Beteiligung anfordern, Externe Beteiligung anfordern "Stellungnahme zu Beteiligung", Gebühr erheben, Gebührenbescheid zustellen, Interner Bearbeitungsvermerk, Nachforderung zu Beteiligung, Nachforderung zu Beteiligung: Externe Beteiligung anfordern, Status ändern, Stellungnahme zu Beteiligung: Externe Beteiligung anfordern, Vorgangsbezogener Nachrichtenversand Servicebereich, Zustellung Postfach Servicebereich, Zuständigkeit hinzufügen, [auto] Nachricht Statuswechsel versenden
+Objekt-Typen (distinct): 2 - Case, Resource
+Event-Objekt-Beziehungen: 476
+Objekt-Objekt-Beziehungen: 0

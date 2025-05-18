@@ -1,0 +1,4166 @@
+{
+  "eventTypes": [
+    {
+      "name": "Ablehnungsbescheinigung zustellen",
+      "attributes": []
+    },
+    {
+      "name": "Aktenzeichen hinzufügen",
+      "attributes": []
+    },
+    {
+      "name": "Antrag eingegangen",
+      "attributes": []
+    },
+    {
+      "name": "Bescheid zustellen",
+      "attributes": []
+    },
+    {
+      "name": "Bescheinigung zustellen",
+      "attributes": []
+    },
+    {
+      "name": "Datei hinzufügen",
+      "attributes": []
+    },
+    {
+      "name": "Externe Beteiligung anfordern",
+      "attributes": []
+    },
+    {
+      "name": "Externe Beteiligung anfordern \"Stellungnahme zu Beteiligung\"",
+      "attributes": []
+    },
+    {
+      "name": "Gebühr erheben",
+      "attributes": []
+    },
+    {
+      "name": "Gebührenbescheid zustellen",
+      "attributes": []
+    },
+    {
+      "name": "Interner Bearbeitungsvermerk",
+      "attributes": []
+    },
+    {
+      "name": "Nachforderung zu Beteiligung",
+      "attributes": []
+    },
+    {
+      "name": "Nachforderung zu Beteiligung: Externe Beteiligung anfordern",
+      "attributes": []
+    },
+    {
+      "name": "Status ändern",
+      "attributes": []
+    },
+    {
+      "name": "Stellungnahme zu Beteiligung: Externe Beteiligung anfordern",
+      "attributes": []
+    },
+    {
+      "name": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "attributes": []
+    },
+    {
+      "name": "Zustellung Postfach Servicebereich",
+      "attributes": []
+    },
+    {
+      "name": "Zuständigkeit hinzufügen",
+      "attributes": []
+    },
+    {
+      "name": "[auto] Nachricht Statuswechsel versenden",
+      "attributes": []
+    }
+  ],
+  "objectTypes": [
+    {
+      "name": "Case",
+      "attributes": []
+    },
+    {
+      "name": "Resource",
+      "attributes": []
+    }
+  ],
+  "events": [
+    {
+      "id": "a82fec7c-612b-4045-a4c0-e5e3fdf371e7",
+      "type": "Antrag eingegangen",
+      "time": "2022-10-25T17:02:33Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f29e7b20-ea0c-41d1-83e0-1ff463a143c1",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-10-25T17:02:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f9a907d5-5e27-4ca3-bfe5-641dd823a00c",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-10-25T17:05:01Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8e727463-7932-413d-aaff-2872c2803c06",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-10-25T17:07:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "157ece8a-f87d-4cab-a67c-ca13107ad829",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-10-25T17:07:32Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "cd97773b-b490-457b-abca-e412e39ba643",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-10-25T17:07:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "5f064761-1ac2-4394-ba83-c92e2598fc04",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-10-25T17:08:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "73d79b91-7ab9-4a33-9f23-85a14e359b8b",
+      "type": "Status ändern",
+      "time": "2022-10-25T17:08:20Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d4507398-0e9a-47d7-b95c-4484044cee92",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-10-25T17:08:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a22daec4-abd4-4430-96c0-7d9a356cce30",
+      "type": "Antrag eingegangen",
+      "time": "2022-10-26T18:12:57Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "232fd9a2-1ced-4e87-9f22-5fe2c75f712a",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-10-26T18:12:58Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "68eb0ac0-790f-4cb4-8697-77d1519ac592",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-10-26T18:14:09Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "29a923ae-d416-47d1-8026-fda5908575e3",
+      "type": "Nachforderung zu Beteiligung",
+      "time": "2022-10-26T18:16:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_16",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b6b1f157-942d-4499-88db-2c38cebfac6e",
+      "type": "Externe Beteiligung anfordern \"Stellungnahme zu Beteiligung\"",
+      "time": "2022-10-26T18:16:54Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_16",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "bc80cba8-86c6-409f-aa1f-91fae07eb9ed",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-11-03T09:36:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8cf5a5ee-9ece-482e-9073-d853143b27f2",
+      "type": "Gebühr erheben",
+      "time": "2022-11-04T18:08:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "30daef0c-9307-497b-a87d-b865b6503031",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-04T18:08:17Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1635cdf7-8d8e-44e7-b1dd-c4bc1a4dc8b8",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-11-04T18:10:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "83971f67-5385-4caa-92f4-08a2cf371636",
+      "type": "Status ändern",
+      "time": "2022-11-04T18:10:42Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a5a801cb-7dd6-400a-9e2b-b55e84577915",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-11-04T18:10:41Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "67c2cc90-2c35-4ddd-8961-e8b1cc1fdab6",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-11-04T18:10:53Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "9f600a04-b260-4760-9689-70e63bc198e5",
+      "type": "Bescheid zustellen",
+      "time": "2022-11-04T18:11:08Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "28c20d86-6aa6-41b4-bfb8-d1caa360a953",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-04T18:11:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "2c20a12b-c278-43be-b2e7-55e86fd854cb",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-11-04T18:11:17Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0be26184-cbdd-4f8f-848d-f2bf687f0bb9",
+      "type": "Gebühr erheben",
+      "time": "2022-11-07T07:12:20Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7d010cae-b805-47d6-8230-72014e016c64",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-07T07:12:17Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8dfcae4c-71ab-45e3-80cd-817a89217db2",
+      "type": "Gebühr erheben",
+      "time": "2022-11-08T14:15:58Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1cfd2f5b-7691-4cd2-92e0-e7014519ace2",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-08T14:15:55Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "51c1983d-6065-4eb1-8729-2f990347e403",
+      "type": "Antrag eingegangen",
+      "time": "2022-11-10T10:39:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "05ceec84-1cba-4298-93aa-73a9750e1dd0",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-10T10:39:41Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fd11fc97-94bb-413d-a4e4-b9e2705bd18c",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-11-10T10:41:06Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c77392a0-cae7-4c5e-bc76-36fdbafc3c6b",
+      "type": "Status ändern",
+      "time": "2022-11-10T10:41:24Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "efedb118-eedd-42cb-9801-d821699056cc",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-11-10T10:41:23Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "462cad7e-c650-49b2-9286-9358be740e95",
+      "type": "Gebühr erheben",
+      "time": "2022-11-10T10:41:42Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6ba28807-fb07-494d-8ec3-b791df51e33a",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-10T10:41:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "bc38b7e7-9541-429c-acd4-b3d2d293a525",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-11-10T10:41:58Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "48db93b6-ae48-4d1a-a0c5-a197c1bffdc1",
+      "type": "Bescheid zustellen",
+      "time": "2022-11-10T10:42:12Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "5d492256-a5b0-42a8-ad45-27320c4cee06",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-10T10:42:10Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "5e5831a9-cf64-4221-ba42-bc69a10c4ec0",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-11-10T10:42:23Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0048f878-8781-48de-8dcd-44bfc3dea2e9",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-11-10T10:42:38Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "902301c2-2556-45f3-86ae-762785f2d13f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a1ae657e-88b8-4236-9cfe-43b3e6834165",
+      "type": "Antrag eingegangen",
+      "time": "2022-11-10T11:14:26Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "833e199f-1dea-4b44-a1dc-ab0866869c54",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-10T11:14:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "e43daf3d-1fc3-4acf-b199-ff05b3bd3d99",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-11-10T11:19:13Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "84f9f63b-5c70-477c-bf62-ef613fef19e9",
+      "type": "Status ändern",
+      "time": "2022-11-10T11:19:39Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a5560ea7-b587-455e-b6ea-310d2aa67544",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-11-10T11:19:38Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fcb538a7-37fd-4dbe-bcb3-3fbb844333fe",
+      "type": "Gebühr erheben",
+      "time": "2022-11-10T11:19:58Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d0c1f661-6862-4384-a831-af629a6adcdb",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-10T11:19:56Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0dcbad58-e628-4443-bd95-9bc9b6a04785",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-11-10T11:20:22Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6579e7cf-de6f-457f-a0c3-651a8af9eae8",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-11-10T11:20:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d9288466-4a7d-4d71-bdc1-6a8ffdf9dd72",
+      "type": "Bescheid zustellen",
+      "time": "2022-11-10T11:20:59Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4ceab511-9a8a-4d48-873b-9a9fd6d15f10",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-11-10T11:20:56Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "61632217-9d85-424a-8d0b-c6c44e3a1f3b",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-11-10T11:21:16Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f2de1063-0ff8-411d-af58-0e700579c675",
+      "type": "Antrag eingegangen",
+      "time": "2022-12-01T08:31:53Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "3a137496-3486-4375-86bc-a27921021dc5",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-01T08:31:54Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6efae5ff-da1c-45d4-950b-08ebef1484fa",
+      "type": "Status ändern",
+      "time": "2022-12-01T08:36:22Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "2b45d678-d7e1-4c4d-985a-6d952324e459",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-12-01T08:36:21Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "dac96ea5-abc8-4119-9b7d-ab442a0bcc6f",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-12-01T08:40:45Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "aeabb969-3da9-470c-8442-53bc80e01dc8",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-12-01T08:42:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b18ce804-cda1-4afa-b3c5-ba47da040eb5",
+      "type": "Gebühr erheben",
+      "time": "2022-12-01T08:45:32Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4c7073f3-e238-42b4-8080-0ae6ef5b1121",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-01T08:45:30Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c497f7f5-f192-45e1-a9d5-e211bd66b96a",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-12-01T08:53:16Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d061923b-2545-4265-ba32-e87028c656fb",
+      "type": "Externe Beteiligung anfordern \"Stellungnahme zu Beteiligung\"",
+      "time": "2022-12-01T08:56:29Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b58c14cf-3de7-4d8c-88d8-5d8548f8de59",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-12-01T09:00:21Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6a9db0bd-fe36-4fc6-b793-1813f9810ff3",
+      "type": "Bescheid zustellen",
+      "time": "2022-12-01T09:55:22Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1a10d71c-c861-475b-a6f3-e67966395ca7",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-01T09:55:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "9fa43d27-8961-4a0a-8a6f-59637af5dbf1",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-15T11:24:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "30b129e1-3ad1-46b2-a692-23646fbde882",
+      "type": "Antrag eingegangen",
+      "time": "2022-12-15T11:24:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a6646ba2-c8be-4f29-a4c5-f9577706665e",
+      "type": "Status ändern",
+      "time": "2022-12-15T15:33:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c2fdd3be-39c0-4085-95e3-1a12413d848a",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-12-15T15:33:33Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "66e58af8-16f6-4639-801a-851b5a61b83d",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-12-15T15:33:47Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0e40cf4e-a60c-419b-9405-c34d6d575394",
+      "type": "Gebühr erheben",
+      "time": "2022-12-15T15:33:57Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6db82c80-852a-457a-b04e-ca1bdefc6632",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-15T15:33:55Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "099ea28c-c721-4280-a1eb-b4caf5f139a8",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-12-15T15:34:29Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "64a34637-a27a-4f21-b587-d1943a39871f",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-12-15T15:41:08Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "2c023a13-de22-42c2-8f20-5bde46e8534a",
+      "type": "Antrag eingegangen",
+      "time": "2022-12-19T10:20:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7714a10c-ea12-4e63-a563-37a638f4daac",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T10:20:52Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0cba7e8b-9be7-4f2e-98d9-1921ad8d2a98",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-12-19T10:24:44Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "10d760bc-ed6f-43a8-a6ed-715622497347",
+      "type": "Status ändern",
+      "time": "2022-12-19T10:25:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "2d524cf3-76ec-49dc-9ac7-c6bc8d2283d6",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-12-19T10:25:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fc82918f-48a3-4b27-a83a-4f6274b22ee5",
+      "type": "Gebühr erheben",
+      "time": "2022-12-19T10:26:06Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "43a8f808-a7ec-400a-b43c-fec329017048",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T10:26:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "53766623-acf1-467f-8d82-12294133f749",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-12-19T10:27:47Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4f7c89ed-f391-48f9-b142-464b00a496ad",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-12-19T10:28:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0e0025ab-cfb3-4e6e-88d9-18cb8461956e",
+      "type": "Antrag eingegangen",
+      "time": "2022-12-19T10:29:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b4d46611-7ee1-41de-b86e-696a3c48eccb",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_189",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4a63cb2e-0bf7-4175-b5e0-815f0a3f0192",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T10:29:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b4d46611-7ee1-41de-b86e-696a3c48eccb",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_189",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6b74a1bc-7bc4-4808-a748-3c0658e94a0a",
+      "type": "Bescheid zustellen",
+      "time": "2022-12-19T10:29:18Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "35eec018-7e58-4616-a9a7-2efd6032576a",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T10:29:15Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4df5470f-e7ad-4511-8a34-59b718ed51d6",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-12-19T10:31:18Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7467bb56-5367-4ed3-84d6-2174c2093211",
+      "type": "Antrag eingegangen",
+      "time": "2022-12-19T11:11:46Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "48bfe5b2-3905-475d-a6ba-b6e45dab082b",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T11:11:47Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "cb78f569-8321-4bfa-a0c1-1e98c0fe554d",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2022-12-19T11:17:10Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b6ba358f-134c-48d5-a179-e95a7f6295c2",
+      "type": "Status ändern",
+      "time": "2022-12-19T11:17:42Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "88768019-1e04-4f7c-bb52-4a73e45c2bad",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2022-12-19T11:17:41Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "e36725ad-cd34-48f7-a465-8d712a69333a",
+      "type": "Gebühr erheben",
+      "time": "2022-12-19T11:18:23Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "ef70c13b-60aa-4c4c-8d1d-e4ffad5f4909",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T11:18:21Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "54a50189-4525-4d9b-8768-5212636adf08",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2022-12-19T11:19:32Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f0e54d8b-ae2d-4689-a4be-ecde1923ce44",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2022-12-19T11:20:01Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f24b209f-b4c6-42ae-a93a-b5d4e53084b1",
+      "type": "Bescheid zustellen",
+      "time": "2022-12-19T11:20:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "58ed9277-2357-4efa-bf99-2db4d016ba61",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2022-12-19T11:20:37Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "dfb2834a-709c-4abc-a3d4-f0c6f7b4f503",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2022-12-19T11:21:23Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "73a0f51d-e0e2-4461-9a30-46ecb2fbd1cb",
+      "type": "Bescheinigung zustellen",
+      "time": "2023-01-19T20:27:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c8234773-88e5-4b9b-b5aa-0ee0bc250973",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-01-19T20:27:24Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0d42ea52-e559-4312-bec1-061722130c84",
+      "type": "Datei hinzufügen",
+      "time": "2023-01-24T14:54:45Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f23006a9-f09f-4949-abce-ca9d48a91eb2",
+      "type": "Gebührenbescheid zustellen",
+      "time": "2023-01-26T17:27:10Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "643c3adb-1184-4341-b96a-d2b39a4e5fe0",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-01-26T17:27:06Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "721ddc1a-1f8f-43fa-a563-9aeebafc1df1",
+      "type": "Gebühr erheben",
+      "time": "2023-01-31T20:41:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1be5b7e7-173f-427c-bbac-6341af1da480",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-01-31T20:41:15Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0474dffb-ba5b-456e-9bf4-bfbb143a7f70",
+      "type": "Gebühr erheben",
+      "time": "2023-02-07T11:17:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7d5071f8-001f-4aa0-abdf-788157e47ec7",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-07T11:16:59Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b16697f8-5903-4844-b6a0-bfc24a3b7023",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-07T11:21:35Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6e13aa8c-337b-43d8-bf0c-360fd4715a79",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-07T11:21:35Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "19230692-22e3-4704-a2e4-b45a36b9c93c",
+      "type": "Gebühr erheben",
+      "time": "2023-02-07T11:22:09Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6e008671-6729-478c-8c8f-6db3a1501106",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-07T11:22:07Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0538a16d-1272-4bae-9d7e-2920e02f3266",
+      "type": "Gebühr erheben",
+      "time": "2023-02-07T13:18:03Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "9735ad21-58da-4d31-8d3f-7ac04bd9cf25",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-07T13:17:59Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a5fe70de-cba6-4057-a644-15cc5ae6df08",
+      "type": "Ablehnungsbescheinigung zustellen",
+      "time": "2023-02-07T14:28:30Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "88a6bf60-ab8b-4269-bb8c-6c185004659d",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-07T14:28:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8935f9f7-65c9-4346-9c21-e019716c7e80",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-15T15:17:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "9a9c2731-5ed8-47d3-be21-b5e507a468bd",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-15T15:17:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a0b1b3a1-4c7c-45c1-9186-4b6c61fa8714",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-02-15T15:23:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "453697ad-ef88-434f-bbf9-c65274baa2a2",
+      "type": "Status ändern",
+      "time": "2023-02-15T15:23:17Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "41fe8d58-77e3-4450-a6ac-b6e52925fc5e",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-15T15:23:16Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "68201013-af5c-49a0-acd8-4d6008ab0f64",
+      "type": "Gebühr erheben",
+      "time": "2023-02-15T15:23:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a21f2d21-7ebb-4e73-8f15-1adb23c07073",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-15T15:23:25Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8bea8c9c-97c3-46df-aeec-8d3991d1753d",
+      "type": "Datei hinzufügen",
+      "time": "2023-02-15T15:23:43Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "2ac9c314-0662-4b12-a01a-7fed53770fd9",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2023-02-15T15:24:07Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "ebf82ecf-e810-4c02-9102-19cd090ec9a8",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2023-02-15T15:24:38Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "86d67072-2ca5-4aba-a7af-fe9646da4c22",
+      "type": "Ablehnungsbescheinigung zustellen",
+      "time": "2023-02-15T15:24:55Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a5f8327d-7acc-4335-b0b2-c6e7cb38a43d",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-15T15:24:52Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1373f728-7354-4f11-99fa-22f5d7618fa3",
+      "type": "Gebührenbescheid zustellen",
+      "time": "2023-02-15T15:25:13Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "df95e70d-a6e0-43a9-8b8b-ed467e4276cc",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-15T15:25:09Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7d6c4a7b-4a25-45ac-b6a5-8655b76c5226",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-02-15T15:25:29Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d198dfb3-72f3-4959-85fc-d2d3f8d86cdc",
+      "type": "Nachforderung zu Beteiligung: Externe Beteiligung anfordern",
+      "time": "2023-02-15T15:29:13Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0e730995-e8cb-4e4b-b8b0-e7852c61cada",
+      "type": "Stellungnahme zu Beteiligung: Externe Beteiligung anfordern",
+      "time": "2023-02-15T15:29:31Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "14134832-8c7d-4c73-9011-b88d92a3f91c",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-19T12:35:49Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_53",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "bf6e42f8-13d7-413d-a77a-c9e667e7ded3",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-19T12:35:50Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_53",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "66cde33b-9d1b-49ac-bca9-70fa976ee854",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-02-19T12:37:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0a7e9500-e108-4869-bb88-7afe154574a8",
+      "type": "Status ändern",
+      "time": "2023-02-19T12:37:52Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "04cd40b0-e3e9-4a42-974a-4092c6096e88",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-19T12:37:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8684e8f2-ee4c-450e-937f-72b80db1fd8a",
+      "type": "Gebühr erheben",
+      "time": "2023-02-19T12:38:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c54df901-1cc5-49b7-93cb-3a4943167f5e",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-19T12:38:17Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "5e2da583-01cc-496c-a49d-abc641d9344d",
+      "type": "Datei hinzufügen",
+      "time": "2023-02-19T12:38:49Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "356fea53-d9ca-4ac3-88b3-481d30d4db4c",
+      "type": "Status ändern",
+      "time": "2023-02-19T12:39:43Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4bf125df-e694-4a16-90f7-08c57023d112",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-19T12:39:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fa5a9d39-1907-4a37-848f-68a2d5acdafe",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-02-19T12:45:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_1",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "54d73faa-e6fb-4871-9bb5-aa7b46b9a5e9",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-21T11:13:09Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e2e31831-3d1f-46ff-bfc8-791c3773470e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0e096395-2d62-4252-b930-f6297f68fa23",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-21T11:13:10Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e2e31831-3d1f-46ff-bfc8-791c3773470e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4c859026-3a49-4707-a451-aa8bd772cf86",
+      "type": "Status ändern",
+      "time": "2023-02-21T11:14:32Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e2e31831-3d1f-46ff-bfc8-791c3773470e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1e1a03f5-09ef-452a-8c59-d866e4a234f0",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-21T11:14:30Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e2e31831-3d1f-46ff-bfc8-791c3773470e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "cd0ac4b9-bc9f-43d3-858f-4041b688e38d",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-22T08:55:39Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "636f9baf-77df-486a-b870-30a8c2db110e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "3d07abb0-3942-48fd-8c5c-40ddc489d85e",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T08:55:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "636f9baf-77df-486a-b870-30a8c2db110e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "036fb1b0-b631-4d46-abb6-19318e64f946",
+      "type": "Status ändern",
+      "time": "2023-02-22T08:57:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "636f9baf-77df-486a-b870-30a8c2db110e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f58941a6-a4cd-414f-a1d5-236392be678e",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-22T08:57:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "636f9baf-77df-486a-b870-30a8c2db110e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "bfac6561-0ba4-41fc-8023-d401eca42c8a",
+      "type": "Ablehnungsbescheinigung zustellen",
+      "time": "2023-02-22T08:57:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "636f9baf-77df-486a-b870-30a8c2db110e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a24ac958-5e8b-48fe-b5b0-e78e3340c609",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T08:57:50Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "636f9baf-77df-486a-b870-30a8c2db110e",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "eff4ee91-c0b1-4b3a-b0d6-33bb1400f660",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-22T11:48:19Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_463",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7b34e7c9-af9b-47ff-8c76-613da46745b2",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T11:48:20Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_463",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "ac3d1b4b-9758-4183-aa9c-68534ce9182b",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-22T11:49:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_463",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "50e51967-77f3-4e43-8432-bc027f7d20ab",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T11:49:01Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_463",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fd9fb2e0-ca1f-4bd9-89bf-e04d08ecea23",
+      "type": "Status ändern",
+      "time": "2023-02-22T11:55:50Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "2fbb3c9d-21fc-4baa-9d59-6844fefb58af",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-22T11:55:49Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6ac74f1a-7ae3-42e4-b1c8-a8147ce89903",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-02-22T11:56:46Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0494c6a3-c6b6-4862-a517-804e51cdede2",
+      "type": "Zuständigkeit hinzufügen",
+      "time": "2023-02-22T11:57:44Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "e18a9d5a-0fd0-4737-9ac2-9a3451f35e04",
+      "type": "Datei hinzufügen",
+      "time": "2023-02-22T11:58:13Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f6548df0-19c2-4aac-806e-2fc77d0c349d",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-02-22T11:58:48Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_463",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "18cf763a-d336-4bdf-913e-819b3689f16b",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-02-22T11:59:22Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "df850068-65fe-4218-9d06-4b2f4e79099d",
+      "type": "Interner Bearbeitungsvermerk",
+      "time": "2023-02-22T11:59:59Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c9487c0f-3f4c-4241-a30e-cfb7a3120ce6",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2023-02-22T12:00:30Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "ba3e6aa8-51bb-429e-9007-3bf8b7ae1401",
+      "type": "Nachforderung zu Beteiligung: Externe Beteiligung anfordern",
+      "time": "2023-02-22T12:04:35Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_16",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "aaa5accf-f739-4d76-996b-db600259bbec",
+      "type": "Stellungnahme zu Beteiligung: Externe Beteiligung anfordern",
+      "time": "2023-02-22T12:06:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_16",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "449b8b3c-fc47-4c7b-bccd-cf3197f40cf3",
+      "type": "Gebühr erheben",
+      "time": "2023-02-22T12:08:46Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "dc6360eb-42a4-4278-826d-599dbf68e23d",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T12:08:41Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a0033fc5-8727-4354-8baa-2aae87347e5c",
+      "type": "Gebührenbescheid zustellen",
+      "time": "2023-02-22T12:12:32Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1363f5d3-e395-40c0-855c-f5ad7d278a75",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T12:12:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4ba6d4fa-43a0-48a8-95cd-8267c078ffd6",
+      "type": "Ablehnungsbescheinigung zustellen",
+      "time": "2023-02-22T12:13:29Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "7d2a4f62-34b6-414f-82e2-f3c08d02dcf2",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-22T12:13:24Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6693a7f0-53dd-42dd-83eb-47c3363d51ba",
+      "type": "Status ändern",
+      "time": "2023-02-22T12:29:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d6a1f34c-b768-4594-b204-bc9f940727e2",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-22T12:29:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6dbc6358-81bd-474d-b9c5-02300cecc086",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-02-22T12:34:26Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8e897427-786e-42be-9201-f304575b10ba",
+      "type": "Status ändern",
+      "time": "2023-02-22T12:34:50Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "65f6614c-e99a-4d05-b5ec-3e23021730eb",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-22T12:34:48Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "56d7defb-5d06-448c-8c76-c312b2de74ef",
+      "type": "Datei hinzufügen",
+      "time": "2023-02-22T12:36:37Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fa78101b-9007-4b81-92d1-dea7e5c47935",
+      "type": "Status ändern",
+      "time": "2023-02-22T12:37:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "e5e81229-f2ef-4db4-b07b-505c76d5f533",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-22T12:37:02Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "99b153cd-194b-400f-b9fd-7603622dc91e",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-24T09:58:02Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "28b51373-60f1-42a9-b8a7-0a2a9041e373",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_53",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1d74031d-7e9b-45e1-91c3-cc872cce428b",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-24T09:58:03Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "28b51373-60f1-42a9-b8a7-0a2a9041e373",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_53",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6e0a9eaf-8b48-4cd9-9a6b-8777dae7b911",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-24T13:50:49Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "16ad5b7e-06bc-468f-a52e-ea18b4e7de80",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-24T13:50:50Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "48d7b4e6-392b-4463-b748-477345284dfc",
+      "type": "Status ändern",
+      "time": "2023-02-24T13:53:06Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a36b269a-8531-4cb3-ae95-188c6f34d46d",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-02-24T13:53:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "59f2e485-e05b-4998-8b1d-8e5dc5efff8a",
+      "type": "Gebühr erheben",
+      "time": "2023-02-24T13:53:24Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f81d9bdc-ed02-4849-a739-592343184ad6",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-24T13:53:22Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1965fcf6-8126-4f8e-b036-eadf03c5e8f2",
+      "type": "Datei hinzufügen",
+      "time": "2023-02-24T13:53:41Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "faf42a6b-8e16-4444-a1b2-f23ba17804de",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2023-02-24T13:54:09Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a18555e9-b17c-4679-b25f-6cab73104d88",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-02-24T13:54:24Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a3cf1027-f01d-491d-a7ce-5c43ed9c4be2",
+      "type": "Antrag eingegangen",
+      "time": "2023-02-24T18:15:42Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "cb468426-9477-46c5-8410-0804c332272f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "674779a9-2874-47c0-ba04-6c1b649f3490",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-24T18:15:43Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "cb468426-9477-46c5-8410-0804c332272f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "13707543-5f8c-4cc9-b489-b0381cbf78d5",
+      "type": "Gebühr erheben",
+      "time": "2023-02-24T18:16:59Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "cb468426-9477-46c5-8410-0804c332272f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f94a1d5d-7603-426c-9063-2a147c4aeaa7",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-02-24T18:16:58Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "cb468426-9477-46c5-8410-0804c332272f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c4e7a887-73d1-4372-8a28-b3775a827484",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-02-27T08:39:05Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "cb468426-9477-46c5-8410-0804c332272f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "83d4e311-adbc-469f-a709-b0bcc590ee69",
+      "type": "Antrag eingegangen",
+      "time": "2023-03-23T16:40:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "bb539a86-9032-4b03-893c-1c629d551212",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "d3d84c92-80f1-47c4-b3f9-111075d03f79",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-03-23T16:40:29Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "bb539a86-9032-4b03-893c-1c629d551212",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_182",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6ae30c65-9c8c-4c9f-8d3d-78aa9ae87d9c",
+      "type": "Gebühr erheben",
+      "time": "2023-03-23T16:41:16Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "bb539a86-9032-4b03-893c-1c629d551212",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "fe10fe67-51c7-44ff-8c78-00d3fdc5e817",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-03-23T16:41:14Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "bb539a86-9032-4b03-893c-1c629d551212",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "43dbb807-9e65-4c75-b97b-50c9a0119d5b",
+      "type": "Antrag eingegangen",
+      "time": "2023-04-17T11:31:37Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_124",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0b8374fb-5777-4315-921a-59e5210c0c94",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-04-17T11:31:38Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_124",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "10527e58-5543-4d73-b115-93a13c690a98",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-04-17T11:33:30Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b64b096f-2e15-449c-9713-b47a6ee71ae6",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-04-17T11:35:51Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8a164299-fa27-47af-aba5-f646465ab0e8",
+      "type": "Vorgangsbezogener Nachrichtenversand Servicebereich",
+      "time": "2023-04-17T11:36:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_124",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "92c8bb0d-665a-471a-8993-f3a09f798cd8",
+      "type": "Externe Beteiligung anfordern",
+      "time": "2023-04-17T11:40:44Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "0cbaeeaf-a4ac-4cc8-a9cd-792c210148df",
+      "type": "Stellungnahme zu Beteiligung: Externe Beteiligung anfordern",
+      "time": "2023-04-17T11:42:33Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_16",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "5d87b4b3-6aa0-43c7-ba95-3951dd3af180",
+      "type": "Gebühr erheben",
+      "time": "2023-04-17T11:46:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "34f51d01-3863-4ef1-8e4b-991bd0870946",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-04-17T11:46:29Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "9203bbfe-284e-486b-b3cc-deb8cdb014f1",
+      "type": "Gebührenbescheid zustellen",
+      "time": "2023-04-17T11:54:40Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "965bed8d-ea99-4c1a-b48c-d86ef42956c6",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-04-17T11:54:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "3622192c-1a70-4bcb-9592-192b9bae98bb",
+      "type": "Status ändern",
+      "time": "2023-04-18T08:06:52Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "12716d38-57fd-4421-a8f2-fa582968a039",
+      "type": "[auto] Nachricht Statuswechsel versenden",
+      "time": "2023-04-18T08:06:49Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1b2d159c-be4d-4ce6-9a81-740ceb922ae1",
+      "type": "Antrag eingegangen",
+      "time": "2023-07-19T12:26:46Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "ca625978-e66a-4ea7-9d64-ee23c964c67f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_471",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "cb65521b-85a6-4ba5-a5ab-c47077b95f42",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-07-19T12:26:47Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "ca625978-e66a-4ea7-9d64-ee23c964c67f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_471",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "e61494a4-d57e-4904-815b-ce4a08bb2190",
+      "type": "Aktenzeichen hinzufügen",
+      "time": "2023-07-19T12:27:11Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "ca625978-e66a-4ea7-9d64-ee23c964c67f",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_19",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "8c1e2403-fba2-41ac-ac87-d4b8055e46af",
+      "type": "Antrag eingegangen",
+      "time": "2023-08-28T13:12:36Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e44ddd74-6efd-48d3-9e05-465ce116daad",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_326",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "71fe6ddc-3a07-44a8-af03-be0c94288d9a",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-08-28T13:12:37Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e44ddd74-6efd-48d3-9e05-465ce116daad",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_326",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b054fb81-3ad5-45f6-b909-0363cf4c4dfb",
+      "type": "Antrag eingegangen",
+      "time": "2023-09-27T13:39:56Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e4860e35-d250-4169-bcbf-557821057b73",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_571",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "6f4151e5-352e-47d3-981a-aa5462060411",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-09-27T13:39:57Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "e4860e35-d250-4169-bcbf-557821057b73",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_571",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "c4ce9d74-e649-4af9-a110-6391fea3fff9",
+      "type": "Antrag eingegangen",
+      "time": "2023-11-07T14:45:27Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b2c23e15-a1d5-48ff-832c-e4e2e78ad9bb",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "a9ef05fd-3c07-40ca-ae05-220efd39cefe",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-11-07T14:45:28Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "b2c23e15-a1d5-48ff-832c-e4e2e78ad9bb",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "88266e58-b59a-40c1-8edf-a2d274946af1",
+      "type": "Antrag eingegangen",
+      "time": "2023-11-08T07:59:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "59b00602-c53b-404a-ab6e-73e0fa619bde",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "cb7883e4-352f-4da1-9844-afd53431bce5",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-11-08T07:59:01Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "59b00602-c53b-404a-ab6e-73e0fa619bde",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "f9184a3c-7713-46dc-a2ce-8745e5349bf0",
+      "type": "Antrag eingegangen",
+      "time": "2023-11-08T08:34:33Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "9ea624f0-9d9d-4c6f-8ed9-5902db4fa86d",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "4f46aff4-f25f-4fc8-88cd-dfb5768950b0",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-11-08T08:34:34Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "9ea624f0-9d9d-4c6f-8ed9-5902db4fa86d",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b5df654a-4238-486b-aaf6-2350d2bbf8e5",
+      "type": "Antrag eingegangen",
+      "time": "2023-11-08T08:51:09Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1bacc5ba-8e90-479e-a444-e4a44850f7e7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1b65b922-e0de-43b7-ab17-dd045e65a8db",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-11-08T08:51:10Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "1bacc5ba-8e90-479e-a444-e4a44850f7e7",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_589",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "53ca51e5-461a-4a27-a9ed-f40cea540a8b",
+      "type": "Antrag eingegangen",
+      "time": "2023-11-30T21:06:15Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "80ce6211-f368-4a7c-a6e5-058f1db1b981",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_568",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "1cc0f5e7-ee35-407f-9325-c62f5dbc4ac1",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-11-30T21:06:17Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "80ce6211-f368-4a7c-a6e5-058f1db1b981",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_568",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "ceeb5936-47cf-4ed5-9e23-31152353c228",
+      "type": "Antrag eingegangen",
+      "time": "2023-12-01T21:12:01Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "ee587ed9-e047-4b4a-886b-e7142fbff9c1",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_568",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "66950837-c1e6-4a15-8409-f7141357fbbd",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-12-01T21:12:04Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "ee587ed9-e047-4b4a-886b-e7142fbff9c1",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_568",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "cf125412-3101-4064-8c5d-1acaa35f7f31",
+      "type": "Antrag eingegangen",
+      "time": "2023-12-01T21:27:12Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6854cc01-018c-4298-9cbe-e4f31a2aab53",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_568",
+          "qualifier": "resource"
+        }
+      ]
+    },
+    {
+      "id": "b7c5752e-1e68-45b1-8110-946c5a13188f",
+      "type": "Zustellung Postfach Servicebereich",
+      "time": "2023-12-01T21:27:15Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "6854cc01-018c-4298-9cbe-e4f31a2aab53",
+          "qualifier": "case"
+        },
+        {
+          "objectId": "res_568",
+          "qualifier": "resource"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "8081799f-fc63-434b-8ed0-3b19b94b74be",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_182",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_19",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "6bab5911-5a46-4aec-82e2-ac8f163757e9",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_16",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_1",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "902301c2-2556-45f3-86ae-762785f2d13f",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "b0203239-5af4-41ab-ad5a-d24fa029149c",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "8fa4f8f9-06e9-4bbf-9889-07aa3f268248",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "e1f91802-8b7a-433e-8882-93f8b4f650e6",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "b3748cef-63fa-47a3-b82d-96690b4f50c4",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "b4d46611-7ee1-41de-b86e-696a3c48eccb",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_189",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "aa086236-1e21-463a-b1ef-46b7d77389b3",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "d7e5f966-35ff-4bf6-83f1-9b62d2216768",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "1ca84909-93a0-4249-b2da-a2c25c18098e",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "941ed5bf-ed9a-405c-8e9f-61e5386ee609",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_53",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "e2e31831-3d1f-46ff-bfc8-791c3773470e",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "636f9baf-77df-486a-b870-30a8c2db110e",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "480a4b1e-eb2a-41a8-825f-a8c3f10728f7",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_463",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "c259adc7-aa4f-4f23-9e2d-3719d6f377ef",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "28b51373-60f1-42a9-b8a7-0a2a9041e373",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "1d0701a4-b274-4319-b0b6-efb1eb1c71d4",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "cb468426-9477-46c5-8410-0804c332272f",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "bb539a86-9032-4b03-893c-1c629d551212",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "92030b27-ce3f-45a4-b7a7-d2d5a3a42885",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_124",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "ca625978-e66a-4ea7-9d64-ee23c964c67f",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_471",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "e44ddd74-6efd-48d3-9e05-465ce116daad",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_326",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "e4860e35-d250-4169-bcbf-557821057b73",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_571",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "b2c23e15-a1d5-48ff-832c-e4e2e78ad9bb",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_589",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "59b00602-c53b-404a-ab6e-73e0fa619bde",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "9ea624f0-9d9d-4c6f-8ed9-5902db4fa86d",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "1bacc5ba-8e90-479e-a444-e4a44850f7e7",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "80ce6211-f368-4a7c-a6e5-058f1db1b981",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "res_568",
+      "type": "Resource",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "ee587ed9-e047-4b4a-886b-e7142fbff9c1",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "6854cc01-018c-4298-9cbe-e4f31a2aab53",
+      "type": "Case",
+      "attributes": [],
+      "relationships": []
+    }
+  ]
+}
