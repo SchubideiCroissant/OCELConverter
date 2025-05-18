@@ -128,15 +128,3 @@ def write_output_files(ocel_data: Dict, log_path: str, json_path: str) -> None:
 
 # === Main Routine ===
 
-csv_file = r"G:\Studium\6.semester\management\OCEL\input\input.csv"
-json_output_path = r"G:\Studium\6.semester\management\OCEL\output\output.json"
-log_output_path = r"G:\Studium\6.semester\management\OCEL\output\log.txt"
-
-
-
-event_list = read_events_from_csv(csv_file)
-events_output, objects_output, event_types, object_types = extract_events_and_objects(event_list)
-ocel_json = build_ocel_json_structure(events_output, objects_output, event_types, object_types)
-write_output_files(ocel_json, log_output_path, json_output_path)
-
-print("OCEL-JSON Datei und Log-Datei wurden erfolgreich erstellt.")

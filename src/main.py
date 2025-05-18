@@ -105,9 +105,6 @@ async def get_mapping():
 
 @app.post("/upload")
 async def handle_upload(file: UploadFile = File(...)):
-    """
-    Verarbeitung der CSV-Datei und Erstellung der OCEL-JSON-Ausgabe.
-    """
     output_path = os.path.join(output_dir, "output.json")
     log_path = os.path.join(output_dir, "log.txt")
 
@@ -120,10 +117,11 @@ async def handle_upload(file: UploadFile = File(...)):
             raise HTTPException(status_code=500, detail=f"Fehler beim Speichern der Datei: {str(e)}")
 
     try:
-        if mapping_data:
-            ocel_json = process_with_mapping(mapping_data)
-        else:
-            ocel_json = process_with_converter(input_path)
+        # Mapping korrekt übergeben
+        Converter.set_mapping(mapping_data)
+
+        # Immer den echten Konverter benutzen
+        ocel_json = process_with_converter(input_path)
 
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(ocel_json, json_file, indent=2, ensure_ascii=False)
