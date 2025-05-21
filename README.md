@@ -7,7 +7,7 @@ Dieses Projekt stellt einen Microservice bereit, der über eine Weboberfläche e
 
 ## Funktionen
 
-- Upload einer `.csv`-Datei über eine Weboberfläche 
+- Upload einer `.csv`-Datei über eine Weboberfläche und einer Mapping Konfiguration im `.json`-Format.
 - Verarbeitung der Datei 
 - Automatischer Download der verarbeiteten Datei
 
@@ -59,6 +59,22 @@ Hier kann eine `.csv`-Datei hochgeladen und verarbeitet werden.
 Datei auswählen oder per Drag & Drop hineinziehen,  
 dann auf **„Umwandeln“** klicken.
 
+Bei Mapping kann die `.json` Datei hochgeladen werden.
+Die Werte in Ressourcen müssen bekannt sein und zu einer Ressource gemappt werden.
+Beispiel für bekannte Ressourcen 182, 19,16...
+
+```json
+{
+  "Mitarbeiter": ["182", "19", "16", "1", "189"],
+  "Teamleiter": ["53", "463"],
+  "Azubi": ["124", "471"],
+  "Werkstudenten": ["326", "571", "589", "568"]
+}
+```
+
+**Testen des Outputs**
+Output json hier hochladen:
+[https://ocelot.pm/]
 
 ## Abhängigkeiten
 
