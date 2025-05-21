@@ -61,7 +61,7 @@ dann auf **„Umwandeln“** klicken.
 
 Bei Mapping kann die `.json` Datei hochgeladen werden.
 Die Werte in Ressourcen müssen bekannt sein und zu einer Ressource gemappt werden.
-Beispiel für bekannte Ressourcen 182, 19,16...
+Beispiel für bekannte Ressourcen 182, 19, 16...
 
 ```json
 {
@@ -72,9 +72,8 @@ Beispiel für bekannte Ressourcen 182, 19,16...
 }
 ```
 
-**Testen des Outputs**
-Output json hier hochladen:
-[https://ocelot.pm/]
+**Testen des Outputs**  
+https://ocelot.pm/
 
 ## Abhängigkeiten
 
