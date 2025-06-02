@@ -6,6 +6,7 @@ Ziel des Projekts war es, ein Python-basiertes Tool zu entwickeln, das CSV-Datei
 
 == Projektziel
 * Einlesen strukturierter CSV-Dateien
+* ZUsätzlich hinzufügen einer Mapping JSON-Datei
 * Konvertierung der Daten in das OCEL 2.0-Format
 * Speicherung als JSON-Datei
 * Importierbarkeit in ProM zur weiteren Analyse
@@ -13,11 +14,12 @@ Ziel des Projekts war es, ein Python-basiertes Tool zu entwickeln, das CSV-Datei
 
 == Anforderungen
 * CSV-Dateien sollen korrekt eingelesen werden.
+* JSON-Datei für 
 * Extraktion von Events, Objekten und Relationen.
 * Speicherung im OCEL 2.0-konformen JSON-Format.
-* Die Ausgabe muss in ProM importierbar sein.
+* Die Ausgabe muss in Ocelot importierbar sein.
 * Strukturierter und wartbarer Python-Quellcode.
-* Liefern Sie den Microservice nach Möglichkeit in einem lauffähigen Container!
+* Microservice mit lauffähigem Docker-Container
 
 == Vorgehensmodell
 * **Modell:** Klassisches Wasserfallmodell
@@ -47,9 +49,5 @@ Da die Projektanforderungen von Anfang an klar definiert waren und sich während
 == Fazit und Ausblick
 Das Projektziel wurde vollständig erreicht. Die Implementierung des Konverters verlief erfolgreich, und die erzeugte Datei ist für die Prozessanalyse geeignet.
 
-**Zukünftige Verbesserungsmöglichkeiten:**
-
-* Unterstützung verschiedener CSV-Formate
-* Erweiterung um komplexere Relationen
-* Direkter Export in XES-Format
-* Entwicklung einer benutzerfreundlichen grafischen Oberfläche (GUI)
+**Was ist OCEL 2.0 und wofür brauch man das?**
+OCEL 2.0 (Object-Centric Event Log) ist ein standardisiertes Format zur Darstellung von objektzentrierten Ereignisprotokollen in Prozessen. Im Gegensatz zu klassischen Event Logs, bei denen sich jedes Ereignis nur auf einen Prozessfall bezieht, erlaubt OCEL die Verknüpfung von Ereignissen mit mehreren beteiligten Objekten (z. B. Aufträge, Kunden, Produkte). Dadurch lassen sich komplexe, reale Geschäftsprozesse detaillierter und strukturierter analysieren, insbesondere wenn mehrere Objekte gleichzeitig interagieren. OCEL 2.0 erweitert den ursprünglichen Standard um klarere Strukturen, verbesserte JSON-Darstellung und eine stärkere Fokussierung auf Interoperabilität und semantische Konsistenz.
