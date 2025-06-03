@@ -1,2 +1,0 @@
-Markdown Format für Pflichtenheft, Programm für UML Diagramme
-Ordnerstruktur, Reduzierung auf ein Python Programm (V)
