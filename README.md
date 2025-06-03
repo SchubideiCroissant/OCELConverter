@@ -54,12 +54,7 @@ Docker muss installiert sein
 
 [http://localhost:8000/](http://localhost:8000/)
 
-Hier kann eine `.csv`-Datei hochgeladen und verarbeitet werden.
-
-Datei auswählen oder per Drag & Drop hineinziehen,  
-dann auf **„Umwandeln“** klicken.
-
-Bei Mapping kann die `.json` Datei hochgeladen werden.
+Unter 1. Mapping kann die `.json` Datei hochgeladen werden.
 Die Werte in Ressourcen müssen bekannt sein und zu einer Ressource gemappt werden.
 Beispiel für bekannte Ressourcen 182, 19, 16...
 
@@ -71,6 +66,13 @@ Beispiel für bekannte Ressourcen 182, 19, 16...
   "Werkstudenten": ["326", "571", "589", "568"]
 }
 ```
+
+Unter 2. CSV Datei hochladen kann eine `.csv`-Datei hochgeladen und verarbeitet werden.
+
+Datei auswählen oder per Drag & Drop hineinziehen,  
+dann auf **„Datei hochladen & verarbeiten“** klicken.
+
+Unter 3. Di Ergebnisse runterladen.
 
 **Testen des Outputs**  
 https://ocelot.pm/
