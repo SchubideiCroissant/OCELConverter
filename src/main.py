@@ -21,9 +21,6 @@ mapping_data = {}
 
 @app.get("/", response_class=HTMLResponse)
 async def homepage():
-    """
-    Startseite mit Bootstrap Styling.
-    """
     return """
     <!DOCTYPE html>
     <html lang="de">
@@ -36,40 +33,116 @@ async def homepage():
                 background-color: #f8f9fa;
             }
             .container {
-                max-width: 600px;
-                margin-top: 100px;
+                max-width: 700px;
+                margin-top: 50px;
                 padding: 30px;
                 background-color: #ffffff;
                 border-radius: 10px;
                 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             }
-            .btn-primary {
+            .btn {
                 width: 100%;
+                margin-top: 10px;
+            }
+            textarea {
+                font-family: monospace;
+                white-space: pre;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h2 class="text-center mb-4">CSV zu OCEL 2.0 Konverter</h2>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <input type="file" class="form-control" name="file" accept=".csv" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Datei hochladen und verarbeiten</button>
+
+            <!-- Mapping JSON -->
+            <form id="mappingForm">
+                <h5>1. Mapping JSON eingeben</h5>
+                <textarea id="mappingInput" class="form-control" rows="6" placeholder='{\n "Mitarbeiter": ["182", "19", "16", "1", "189"],\n "Teamleiter": ["53", "463"]\n}' required></textarea>
+                <button type="submit" class="btn btn-secondary">Mapping senden</button>
+                <div id="mappingResult" class="mt-2 text-success"></div>
             </form>
 
-            <div class="mt-4">
-                <h5>Weitere Endpoints:</h5>
-                <ul>
-                    <li><a href="/docs" class="link-primary">API Dokumentation (Swagger UI)</a></li>
-                    <li><a href="/download/output" class="link-primary">Download output.json</a></li>
-                    <li><a href="/download/log" class="link-primary">Download log.txt</a></li>
-                </ul>
+            <hr>
+
+            <!-- CSV Upload -->
+            <form id="uploadForm">
+                <h5>2. CSV-Datei hochladen</h5>
+                <input type="file" class="form-control" id="uploadFile" accept=".csv" required>
+                <button type="submit" class="btn btn-primary">Datei hochladen &amp; verarbeiten</button>
+                <div id="uploadResult" class="mt-2 text-success"></div>
+            </form>
+
+            <hr>
+
+            <!-- Downloads -->
+            <h5>3. Ergebnisse herunterladen</h5>
+            <a href="/download/output" class="btn btn-outline-success" download>Output JSON herunterladen</a>
+            <a href="/download/log" class="btn btn-outline-dark" download>Log-Datei herunterladen</a>
+            <hr>
+
+            <!-- Link zum GitHub-Repo -->
+            <div class="text-center mt-3">
+                <a href="https://github.com/SchubideiCroissant/OCELConverter" class="link-secondary" target="_blank">
+                    GitHub-Repository dieses Projekts
+                </a>
             </div>
+
         </div>
+
+        <!-- JavaScript -->
+        <script>
+            // Mapping senden
+            document.getElementById("mappingForm").addEventListener("submit", async function(e) {
+                e.preventDefault();
+                const input = document.getElementById("mappingInput").value;
+                try {
+                    const response = await fetch("/mapping", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: input
+                    });
+                    const result = await response.json();
+                    document.getElementById("mappingResult").innerText = "✅ Mapping gesendet.";
+                } catch (err) {
+                    document.getElementById("mappingResult").innerText = "❌ Fehler beim Senden.";
+                }
+            });
+
+            // Datei hochladen
+            document.getElementById("uploadForm").addEventListener("submit", async function(e) {
+                e.preventDefault();
+                const fileInput = document.getElementById("uploadFile");
+                if (!fileInput.files.length) {
+                    document.getElementById("uploadResult").innerText = "❌ Keine Datei ausgewählt.";
+                    return;
+                }
+
+                const formData = new FormData();
+                formData.append("file", fileInput.files[0]);
+
+                try {
+                    const response = await fetch("/upload", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Fehler beim Hochladen.");
+                    }
+
+                    const result = await response.json();
+                    document.getElementById("uploadResult").innerText = "✅ Datei verarbeitet. Du kannst jetzt die Ergebnisse herunterladen.";
+                } catch (err) {
+                    document.getElementById("uploadResult").innerText = "❌ Fehler beim Hochladen.";
+                }
+            });
+        </script>
     </body>
     </html>
     """
+
+
+
 
 # ===========================================
 # Mapping Endpoints
@@ -117,18 +190,16 @@ async def handle_upload(file: UploadFile = File(...)):
             raise HTTPException(status_code=500, detail=f"Fehler beim Speichern der Datei: {str(e)}")
 
     try:
-        # Mapping korrekt übergeben
+        # Mapping setzen
         Converter.set_mapping(mapping_data)
 
-        # Immer den echten Konverter benutzen
-        ocel_json = process_with_converter(input_path)
+        # Verarbeitung der CSV-Daten
+        event_list = Converter.read_events_from_csv(input_path)
+        events_output, objects_output, event_types, object_types = Converter.extract_events_and_objects(event_list)
+        ocel_json = Converter.build_ocel_json_structure(events_output, objects_output, event_types, object_types)
 
-        with open(output_path, "w", encoding="utf-8") as json_file:
-            json.dump(ocel_json, json_file, indent=2, ensure_ascii=False)
-
-        with open(log_path, "w", encoding="utf-8") as log_file:
-            log_file.write(f"Mapping verwendet: {bool(mapping_data)}\n")
-            log_file.write(f"Mapping-Daten: {json.dumps(mapping_data, indent=2)}\n")
+        # Schreiben der JSON + Logdatei via Konverter
+        Converter.write_output_files(ocel_json, log_path, output_path)
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Fehler bei der Verarbeitung: {str(e)}")
