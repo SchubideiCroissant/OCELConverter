@@ -86,6 +86,12 @@ async def homepage():
                     GitHub-Repository dieses Projekts
                 </a>
             </div>
+            <!-- Ocelot -->
+            <div class="text-center mt-3">
+                <a href="https://ocelot.pm/" class="link-secondary" target="_blank">
+                    Testen des Outputs hier
+                </a>
+            </div>
 
         </div>
 
