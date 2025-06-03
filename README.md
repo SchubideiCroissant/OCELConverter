@@ -1,7 +1,7 @@
 # CSV to OCELConverter – Microservice
 
 Dieses Projekt stellt einen Microservice bereit, der über eine Weboberfläche eine Datei entgegennimmt, verarbeitet und eine OEL 2.0 Datei ausliefert.
-
+Diese kann dann mit ocelot.pm analysiert werden.
 
 ---
 
@@ -72,7 +72,7 @@ Unter 2. CSV Datei hochladen kann eine `.csv`-Datei hochgeladen und verarbeitet 
 Datei auswählen oder per Drag & Drop hineinziehen,  
 dann auf **„Datei hochladen & verarbeiten“** klicken.
 
-Unter 3. Di Ergebnisse runterladen.
+Unter 3. Die Ergebnisse runterladen.
 
 **Testen des Outputs**  
 https://ocelot.pm/
