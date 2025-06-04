@@ -6,10 +6,24 @@ from datetime import datetime
 # Mapping Data
 mapping_data = {}
 
+renaming_map = {}
+
+def set_renaming(mapping: Dict[str, Dict[str, str]]):
+    global renaming_map
+    renaming_map = mapping
+
+def apply_renaming(column: str, value: str) -> str:
+    return renaming_map.get(column, {}).get(value, value)
+
 # Funktion zum Setzen des Mappings
 def set_mapping(mapping: Dict[str, list]):
     global mapping_data
-    mapping_data = mapping
+    new_mapping = {}
+    for obj_type, ids in mapping.items():
+        renamed_ids = [apply_renaming("resource", str(i)) for i in ids]  
+        new_mapping[obj_type] = renamed_ids
+    mapping_data = new_mapping
+
 
 def read_events_from_csv(file_path: str) -> List[Dict]:
     events = []
@@ -44,7 +58,7 @@ def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict
         # Mapping Objects
         for obj_type, ids in mapping_data.items():
             for obj_id in ids:
-                if obj_id in row.values():
+                if obj_id in [apply_renaming("resource", v.strip()) for v in row.values()]:
                     obj_key = f"{obj_type}_{obj_id}"
                     if obj_key not in objects_output:
                         objects_output[obj_key] = {
@@ -71,7 +85,7 @@ def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict
             object_types.add("Case")
 
         # Resource Object
-        res_id = row.get("resource", "").strip()
+        res_id = apply_renaming("resource", row.get("resource", "").strip())
         if res_id:
             res_key = f"res_{res_id}"
             if res_key not in objects_output:

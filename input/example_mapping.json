@@ -1,7 +1,17 @@
 {
-  "Mitarbeiter": ["182", "19", "16", "1", "189"],
-  "Teamleiter": ["53", "463"],
-  "Azubi": ["124", "471"],
-  "Kunde": ["326", "571", "589", "568"]
+    "Max Mustermann": "Max Mustermann",
+    "Lisa Beispiel": "Lisa Beispiel",
+    "Tom Schneider": "Tom Schneider",
+    "Anna Weber": "Anna Weber",
+    "Nico Jung": "Nico Jung",
+    "Julia Hofmann": "Julia Hofmann",
+    "Peter König": "Peter König",
+    "Sophie Winkler": "Sophie Winkler",
+    "Lukas Berger": "Lukas Berger",
+    "Kunde A": "Kunde A",
+    "Kunde B": "Kunde B",
+    "Kunde C": "Kunde C",
+    "Kunde D": "Kunde D"
+  
 }
 
