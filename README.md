@@ -67,6 +67,21 @@ Beispiel für bekannte Ressourcen 182, 19, 16...
 }
 ```
 
+Unter Optional: Umbenennungs-Mapping kann man die resources umbenennen.
+```json
+{
+  "resource": {
+    "182": "Max Mustermann",
+    "19": "Lisa Beispiel",
+    "16": "Tom Schneider",
+    "1": "Anna Weber",
+    "189": "Nico Jung",
+
+  }
+}
+```
+In diesem Beispiel werden die resources {182, 19, 16 ...} zu Max Mustermann, Lisa Beispiel, Tom Schneider... umbenannt.
+
 Unter 2. CSV Datei hochladen kann eine `.csv`-Datei hochgeladen und verarbeitet werden.
 
 Datei auswählen oder per Drag & Drop hineinziehen,  
