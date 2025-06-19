@@ -1,2 +1,6 @@
 input/Export.csv
 .idea/material_theme_project_new.xml
+input/eventlog.csv
+input/eventlog copy.csv
+input/eventlog_mapping.json
+input/eventlog_renaming.json
