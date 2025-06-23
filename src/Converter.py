@@ -18,20 +18,26 @@ def apply_renaming(column: str, value: str) -> str:
 # Funktion zum Setzen des Mappings
 def set_mapping(mapping: Dict[str, list]):
     global mapping_data
-    new_mapping = {}
-    for obj_type, ids in mapping.items():
-        renamed_ids = [apply_renaming("resource", str(i)) for i in ids]  
-        new_mapping[obj_type] = renamed_ids
-    mapping_data = new_mapping
+    mapping_data = mapping  # Speichere die IDs wie sie geliefert wurden (nicht umbenennen)
+
 
 
 def read_events_from_csv(file_path: str) -> List[Dict]:
     events = []
     with open(file_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
+
+        # Spaltennamen bereinigen (z. B. ' caseid' → 'caseid')
+        reader.fieldnames = [name.strip().replace('\ufeff', '').replace('"', '') for name in reader.fieldnames]
+        print("Spaltennamen nach Bereinigung:", reader.fieldnames)
+
         for row in reader:
-            events.append(row)
+            # Auch Keys (Spaltennamen) in jeder Zeile bereinigen
+            clean_row = {k.strip(): v for k, v in row.items()}
+            events.append(clean_row)
+
     return events
+
 
 def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict[str, Dict], Set[str], Set[str]]:
     event_types = set()
@@ -40,75 +46,86 @@ def extract_events_and_objects(event_list: List[Dict]) -> Tuple[List[Dict], Dict
     objects_output = {}
     unique_ids = set()
 
-    for row in event_list:
-        evt_id = row["eventid"]
+    #print("Aktuelles Mapping:", mapping_data)
+    #print("Aktuelles Renaming:", renaming_map)
+    try:
+        for row in event_list:
+            evt_id = row["eventid"]
 
-        # Überprüfung auf eindeutige eventID
-        if evt_id in unique_ids:
-            raise ValueError(f"Doppelte eventID gefunden: {evt_id}")
-        unique_ids.add(evt_id)
+            # Überprüfung auf eindeutige eventID
+            if evt_id in unique_ids:
+                raise ValueError(f"Doppelte eventID gefunden: {evt_id}")
+            unique_ids.add(evt_id)
 
-        evt_type = row["activity"]
-        evt_time = row["completiontime"]
+            evt_type = row["activity"]
+            evt_time = row["completiontime"]
 
-        event_types.add(evt_type)
+            event_types.add(evt_type)
 
-        relationships = []
+            relationships = []
 
-        # Mapping Objects
-        for obj_type, ids in mapping_data.items():
-            for obj_id in ids:
-                if obj_id in [apply_renaming("resource", v.strip()) for v in row.values()]:
-                    obj_key = f"{obj_type}_{obj_id}"
-                    if obj_key not in objects_output:
-                        objects_output[obj_key] = {
-                            "id": obj_key,
-                            "type": obj_type,
-                            "attributes": [],
-                            "relationships": []
-                        }
-                    relationships.append({"objectId": obj_key, "qualifier": obj_type})
-                    object_types.add(obj_type)  
+            # Mapping Objects
+            for obj_type, ids in mapping_data.items():
+                for obj_id in ids:
+                    renamed_id = apply_renaming("resource", obj_id)
+                    if renamed_id in [apply_renaming("resource", v.strip()) for v in row.values()]:
+                        obj_key = f"{obj_type}_{renamed_id}"
+                        if obj_key not in objects_output:
+                            objects_output[obj_key] = {
+                                "id": obj_key,
+                                "type": obj_type,
+                                "attributes": [],
+                                "relationships": []
+                            }
+                        relationships.append({"objectId": obj_key, "qualifier": obj_type})
+                        object_types.add(obj_type)  
 
-        # Case Object
-        case_id = row.get("caseid", "").strip()
-        if case_id:
-            case_key = case_id
-            if case_key not in objects_output:
-                objects_output[case_key] = {
-                    "id": case_key,
-                    "type": "Case",
-                    "attributes": [],
-                    "relationships": []
-                }
-            relationships.append({"objectId": case_key, "qualifier": "case"})
-            object_types.add("Case")
+            # Case Object
 
-        # Resource Object
-        res_id = apply_renaming("resource", row.get("resource", "").strip())
-        if res_id:
-            res_key = f"res_{res_id}"
-            if res_key not in objects_output:
-                objects_output[res_key] = {
-                    "id": res_key,
-                    "type": "Resource",
-                    "attributes": [],
-                    "relationships": []
-                }
-            relationships.append({"objectId": res_key, "qualifier": "resource"})
-            object_types.add("Resource")
+            case_id = row.get("caseid", "").strip()
+            print(f"Event {evt_id} – caseid: '{case_id}'")
+            if case_id:
+                case_key = case_id
+                if case_key not in objects_output:
+                    objects_output[case_key] = {
+                        "id": case_key,
+                        "type": "Case",
+                        "attributes": [],
+                        "relationships": []
+                    }
+                relationships.append({"objectId": case_key, "qualifier": "case"})
+                object_types.add("Case")
 
-        # Event-Eintrag
-        event_entry = {
-            "id": evt_id,
-            "type": evt_type,
-            "time": evt_time,
-            "attributes": [],
-            "relationships": relationships
-        }
-        events_output.append(event_entry)
+            # Resource Object
+            res_id = apply_renaming("resource", row.get("resource", "").strip())
+            if res_id:
+                res_key = f"res_{res_id}"
+                if res_key not in objects_output:
+                    objects_output[res_key] = {
+                        "id": res_key,
+                        "type": "Resource",
+                        "attributes": [],
+                        "relationships": []
+                    }
+                relationships.append({"objectId": res_key, "qualifier": "resource"})
+                object_types.add("Resource")
 
-    return events_output, objects_output, event_types, object_types
+            # Event-Eintrag
+            event_entry = {
+                "id": evt_id,
+                "type": evt_type,
+                "time": evt_time,
+                "attributes": [],
+                "relationships": relationships
+            }
+            events_output.append(event_entry)
+
+        
+        print("Alle Objekt-IDs:", list(objects_output.keys()))
+
+        return events_output, objects_output, event_types, object_types
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Fehler bei Verarbeitung: {str(e)}")
 
 def build_ocel_json_structure(events_output: List[Dict], objects_output: Dict[str, Dict],
                               event_types: Set[str], object_types: Set[str]) -> Dict:

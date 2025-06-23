@@ -115,6 +115,7 @@ async def homepage():
                     });
                     const result = await response.json();
                     document.getElementById("mappingResult").innerText = "✅ Mapping gesendet.";
+                    setTimeout(() => document.getElementById("mappingResult").innerText = "", 3000);
                 } catch (err) {
                     document.getElementById("mappingResult").innerText = "❌ Fehler beim Senden.";
                 }
@@ -125,6 +126,7 @@ async def homepage():
                 const response = await fetch("/reset", { method: "POST" });
                 const result = await response.json();
                 document.getElementById("resetResult").innerText = "✅ Zurückgesetzt.";
+                setTimeout(() => document.getElementById("resetResult").innerText = "", 3000);
                 document.getElementById("mappingInput").value = "";
                 document.getElementById("renamingInput").value = "";
             } catch (err) {
@@ -145,6 +147,7 @@ async def homepage():
                     });
                     const result = await response.json();
                     document.getElementById("renamingResult").innerText = "✅ Renaming gesendet.";
+                    setTimeout(() => document.getElementById("renamingResult").innerText = "", 3000);
                 } catch (err) {
                     document.getElementById("renamingResult").innerText = "❌ Fehler beim Senden.";
                 }
@@ -174,8 +177,10 @@ async def homepage():
 
                     const result = await response.json();
                     document.getElementById("uploadResult").innerText = "✅ Datei verarbeitet. Du kannst jetzt die Ergebnisse herunterladen.";
+                    setTimeout(() => document.getElementById("uploadResult").innerText = "", 3000);
                 } catch (err) {
                     document.getElementById("uploadResult").innerText = "❌ Fehler beim Hochladen.";
+                    setTimeout(() => document.getElementById("uploadResult").innerText = "", 3000);
                 }
             });
         </script>
