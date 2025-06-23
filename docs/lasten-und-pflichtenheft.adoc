@@ -9,8 +9,6 @@
 
 = Lasten- und Pflichtenheft __{project_name}__
 
-
-
 == Einleitung und Zielsetzung
 Dieses Dokument dient als Anforderungs- und Spezifikationsdokument (Pflichtenheft) für das Projekt "OCELConverter". Es beschreibt die funktionalen und nicht-funktionalen Anforderungen an die zu erstellende Software. Das Ziel ist es, eine klare Kommunikationsgrundlage zwischen den Projektbeteiligten zu schaffen und die Anforderungen für die Entwicklung, den Test und die finale Abnahme festzuhalten.
 

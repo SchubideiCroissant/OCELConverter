@@ -6,7 +6,7 @@ Ziel des Projekts war es, ein Python-basiertes Tool zu entwickeln, das CSV-Datei
 
 == Projektziel
 * Einlesen strukturierter CSV-Dateien
-* ZUsätzlich hinzufügen einer Mapping JSON-Datei
+* Zusätzlich hinzufügen einer Mapping JSON-Datei
 * Konvertierung der Daten in das OCEL 2.0-Format
 * Speicherung als JSON-Datei
 * Importierbarkeit in Ocelot.pm
