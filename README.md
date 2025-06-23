@@ -54,7 +54,7 @@ Docker muss installiert sein
 
 [http://localhost:8000/](http://localhost:8000/)
 
-Unter 1. Mapping kann die `.json` Datei hochgeladen werden.
+### Unter 1. Mapping kann die `.json` Datei hochgeladen werden.
 Die Werte in Ressourcen müssen bekannt sein und zu einer Ressource gemappt werden.
 Beispiel für bekannte Ressourcen 182, 19, 16...
 
@@ -67,7 +67,7 @@ Beispiel für bekannte Ressourcen 182, 19, 16...
 }
 ```
 
-Unter Optional: Umbenennungs-Mapping kann man die resources umbenennen.
+### Unter Optional: Umbenennungs-Mapping kann man die resources umbenennen.
 ```json
 {
   "resource": {
@@ -82,12 +82,16 @@ Unter Optional: Umbenennungs-Mapping kann man die resources umbenennen.
 ```
 In diesem Beispiel werden die resources {182, 19, 16 ...} zu Max Mustermann, Lisa Beispiel, Tom Schneider... umbenannt.
 
-Unter 2. CSV Datei hochladen kann eine `.csv`-Datei hochgeladen und verarbeitet werden.
+*Achtung*, wenn man dies tut, sollte natürlich auch das Mapping auf die neuen Namen angepasst werden.
+
+### Unter 2. CSV Datei hochladen kann eine `.csv`-Datei hochgeladen und verarbeitet werden.
 
 Datei auswählen oder per Drag & Drop hineinziehen,  
 dann auf **„Datei hochladen & verarbeiten“** klicken.
 
-Unter 3. Die Ergebnisse runterladen.
+*Hinweis*: Im Projekt ist eine Besispiel `.csv` gegeben an der man sich orientieren kann.
+
+### Unter 3. Die Ergebnisse runterladen.
 
 **Testen des Outputs**  
 https://ocelot.pm/
