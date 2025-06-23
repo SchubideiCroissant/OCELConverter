@@ -43,7 +43,7 @@ Da die Projektanforderungen von Anfang an klar definiert waren und sich während
 - objects (mit Attributen)
 - events (mit Zeitstempeln und Relationen)
 - ocel:relations (zwischen Objekten)
-* Der Import in ProM war erfolgreich und die strukturierte Anzeige der Events und Objekte bestätigt die Einhaltung des OCEL 2.0-Standards.
+* Der Import war erfolgreich und die strukturierte Anzeige der Events und Objekte bestätigt die Einhaltung des OCEL 2.0-Standards.
 * Der Microservice ist in einem Docker-Container verfügbar.
 
 == Fazit und Ausblick

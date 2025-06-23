@@ -1,0 +1,26 @@
+@startuml
+!theme plain
+
+package "OCEL-Konverter Microservice" {
+
+    rectangle "main.py (FastAPI)" as main {
+        component "API Endpoints" as endpoints
+        component "Web-Frontend (HTML/JS)" as frontend
+    }
+
+    rectangle "Converter.py" as converter {
+        component "CSV Reader" as csv_reader
+        component "Event/Object Extractor" as extractor
+        component "OCEL Builder" as builder
+        component "File Writer" as writer
+    }
+
+    rectangle "Output-Verzeichnis" as output_dir
+
+    frontend -> endpoints : "sendet Daten (Formulare)"
+    endpoints -> converter : "stößt Verarbeitung an"
+    converter --> output_dir : "erzeugt output.json, log.txt"
+    endpoints --> frontend : "meldet Erfolg/Fehler"
+
+}
+@enduml

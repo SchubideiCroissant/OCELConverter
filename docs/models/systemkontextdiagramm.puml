@@ -1,0 +1,25 @@
+@startuml
+!theme plain
+left to right direction
+
+actor "Anwender" as user
+rectangle "Webbrowser" as browser
+
+package "OCEL-Konverter Microservice" {
+  component "Webserver (FastAPI)" as api
+  component "Konverter-Modul" as converter
+  component "Dateisystem" as fs
+}
+
+rectangle "Externes OCEL Tool\n(z.B. ocelot.pm)" as ocelot_tool
+
+user -- browser : "bedient"
+browser -> api : "HTTP-Requests (Upload, Mapping)"
+api -> converter : "ruft Konvertierung auf"
+converter -> fs : "schreibt output.json, log.txt"
+api --> browser : "HTTP-Responses (Download-Links)"
+browser -> fs : "lädt Dateien herunter"
+user -> ocelot_tool : "analysiert mit"
+fs ..> ocelot_tool : "input.json"
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor Anwender
+
+rectangle OCEL-Konverter {
+  Anwender -- (Mapping definieren)
+  Anwender -- (Umbenennung definieren)
+  Anwender -- (CSV-Datei hochladen)
+  Anwender -- (Ergebnisdateien herunterladen)
+  Anwender -- (Konfiguration zurücksetzen)
+  (CSV-Datei hochladen) ..> (Konvertierung durchführen) : <<triggers>>
+  (Konvertierung durchführen) ..> (OCEL-JSON erstellen) : <<include>>
+  (Konvertierung durchführen) ..> (Log-Datei erstellen) : <<include>>
+}
+@enduml

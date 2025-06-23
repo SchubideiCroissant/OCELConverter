@@ -29,7 +29,7 @@ OCELConverter/
 
 ## Dokumentation
 
-Weitere Informationen finden sich im [Projektbericht](projektbericht.adoc).
+Weitere Informationen finden sich im [Projektbericht](docs/projektbericht.adoc).
 
 ## Installation und Ausführung mit Docker
 

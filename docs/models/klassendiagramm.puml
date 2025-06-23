@@ -1,0 +1,51 @@
+@startuml
+
+package "OCEL 2.0 Converter Microservice" {
+
+    Class FastAPIApp {
+        + / (GET)
+        + /renaming (POST)
+        + /mapping (POST)
+        + /upload (POST)
+        + /download/output (GET)
+        + /download/log (GET)
+        + /reset (POST)
+    }
+
+    Class Converter {
+        + set_renaming()
+        + apply_renaming()
+        + set_mapping()
+        + read_events_from_csv()
+        + extract_events_and_objects()
+        + build_ocel_json_structure()
+        + write_output_files()
+    }
+
+    Class TempFile {
+        + create()
+        + write()
+        + delete()
+    }
+
+    Class FileSystem {
+        + read()
+        + write()
+        + exists()
+    }
+
+    Class CSVFile
+    Class JSONFile
+    Class LogFile
+
+    FastAPIApp --> Converter : uses
+    Converter --> CSVFile : reads
+    Converter --> JSONFile : writes
+    Converter --> LogFile : writes
+    FastAPIApp --> TempFile : manages
+    FastAPIApp --> FileSystem : manages
+    TempFile --> CSVFile : represents
+
+}
+
+@enduml
