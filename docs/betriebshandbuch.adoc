@@ -1,0 +1,100 @@
+:project_name: OCELConverter
+:author: Anne Panzer, Arthur Mehlgarten, Equal, Vincent Schick
+:revdate: {docdatetime}
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+
+
+= Betriebshandbuch: CSV zu OCEL 2.0 Konverter
+== Einleitung und Ziel
+
+Dieses Tool ist ein webbasierter Microservice, der entwickelt wurde, um Anwendern ohne Programmierkenntnisse die Konvertierung von Prozessdaten zu ermöglichen. Das Hauptziel ist es, Event-Logs, die im einfachen CSV-Format vorliegen, in das moderne OCEL 2.0 JSON-Format umzuwandeln. Die erzeugte OCEL-Datei kann anschließend für objekt-zentrierte Process-Mining-Analysen in Werkzeugen wie `ocelot.pm` verwendet werden.
+
+== Voraussetzungen
+
+Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes bereithaben:
+
+* *Eine Event-Log-Datei im CSV-Format*. Die Datei sollte mindestens die folgenden Spalten enthalten:
+** `eventid`: Eine für jedes Event eindeutige ID.
+** `activity`: Der Name der durchgeführten Aktivität.
+** `completiontime`: Der Zeitstempel, wann das Event abgeschlossen wurde.
+** `resource`: Die Ressource, die das Event ausgeführt hat (z. B. eine Mitarbeiter-ID).
+** `caseid`: Eine ID für den Fall, zu dem das Event gehört.
+
+* *Eine Vorstellung vom Mapping*. Sie müssen wissen, welche Ressourcen-IDs (z. B. `182`, `19`) zu welchen Objekttypen (z. B. "Mitarbeiter", "Teamleiter") gehören.
+
+== Schritt-für-Schritt-Anleitung
+
+Die Benutzeroberfläche ist selbsterklärend und führt Sie durch einen klaren Drei-Schritte-Prozess.
+
+=== Schritt 1: Mapping und Umbenennung definieren
+
+In diesem Abschnitt konfigurieren Sie, wie die Daten aus Ihrer CSV-Datei interpretiert werden sollen.
+
+==== A. Mapping JSON eingeben (Erforderlich)
+
+Hier definieren Sie, welche Ressourcen zu welchem Objekttyp gehören.
+
+. Geben Sie Ihre Mapping-Konfiguration in das Textfeld *1. Mapping JSON eingeben* ein. Die Struktur ist ein JSON-Objekt, bei dem der Schlüssel der Objekttyp (z. B. "Mitarbeiter") und der Wert eine Liste von Ressourcen-IDs ist.
++
+.Beispiel für Mapping
+[source,json]
+----
+{
+  "Mitarbeiter": ["182", "19", "16", "1", "189"],
+  "Teamleiter": ["53", "463"]
+}
+----
+
+. Klicken Sie auf den Button *Mapping senden*.
+. Bei Erfolg erscheint die Nachricht "✅ Mapping gesendet.".
+
+==== B. Umbenennungs-Mapping (Optional)
+
+Diese Funktion erlaubt es Ihnen, IDs durch Klarnamen zu ersetzen, um die Analyse später lesbarer zu machen.
+
+. Geben Sie Ihre Umbenennungs-Regeln in das Textfeld *Optional: Umbenennungs-Mapping* ein.
++
+.Beispiel für Umbenennung
+[source,json]
+----
+{
+  "resource": {
+    "182": "Max Mustermann",
+    "19": "Lisa Beispiel"
+  }
+}
+----
+
+. Klicken Sie auf *Renaming senden*.
+.
+NOTE: Wenn Sie Ressourcen umbenennen (z. B. "182" zu "Max Mustermann"), müssen Sie diese neuen Namen auch im Mapping unter Schritt 1A verwenden.
+
+=== Schritt 2: CSV-Datei hochladen & verarbeiten
+
+. Klicken Sie im Abschnitt *2. CSV-Datei hochladen* auf das Feld zur Dateiauswahl, um Ihre `.csv`-Datei auszuwählen.
+. Klicken Sie anschließend auf den Button *Datei hochladen & verarbeiten*.
+. [cite_start]Das System verarbeitet nun Ihre Datei gemäß der zuvor gesendeten Konfiguration.
+. [cite_start]Bei Erfolg erscheint die Nachricht: "✅ Datei verarbeitet. Du kannst jetzt die Ergebnisse herunterladen.".
+
+=== Schritt 3: Ergebnisse herunterladen
+
+Nach der erfolgreichen Verarbeitung werden zwei Download-Links im Abschnitt *3. Ergebnisse herunterladen* verfügbar.
+
+. [cite_start]*Output JSON herunterladen*: Dies ist die fertige OCEL 2.0-Datei im `.json`-Format. Sie können diese Datei direkt in Analysetools wie `ocelot.pm` verwenden.
+. [cite_start]*Log-Datei herunterladen*: Dies ist eine einfache `.txt`-Datei, die eine Statistik über die Konvertierung enthält. Sie listet auf, wie viele Events, Objekte und Beziehungen erstellt wurden.
+
+== Zusätzliche Funktionen
+
+* *Konfiguration zurücksetzen*: Wenn Sie von vorne anfangen möchten, klicken Sie auf den Button *Mapping & Renaming zurücksetzen*. [cite_start]Dies löscht alle zuvor gesendeten Konfigurationen auf dem Server.
+* *Feedback*: Das System gibt Ihnen direktes Feedback auf der Seite, z. [cite_start]B. durch kurze Erfolgsmeldungen oder Fehlermeldungen, die nach einigen Sekunden wieder verschwinden.
+
+== Fehlerbehandlung
+
+Das System ist so konzipiert, dass es bei fehlerhaften Eingaben nicht abstürzt, sondern eine verständliche Fehlermeldung ausgibt. Mögliche Fehler sind:
+
+* [cite_start]*Ungültiges JSON-Format*: Wenn die Struktur Ihres Mappings oder Renamings fehlerhaft ist, wird das Senden fehlschlagen.
+* [cite_start]*Fehlerhafte CSV-Datei*: Wenn Ihre CSV-Datei zum Beispiel doppelte `eventid`s enthält, bricht die Verarbeitung ab und Sie erhalten eine entsprechende Fehlermeldung.
+* *Keine Datei ausgewählt*: Wenn Sie auf *Datei hochladen & verarbeiten* klicken, ohne eine Datei ausgewählt zu haben, wird eine Meldung angezeigt.

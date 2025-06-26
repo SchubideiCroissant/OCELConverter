@@ -1,0 +1,9 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(user, "Anwender", "Prozessanalyst, Student")
+System(ocel_converter, "OCELConverter", "Microservice zur Konvertierung von CSV nach OCEL 2.0")
+
+Rel(user, ocel_converter, "Lädt CSV/JSON hoch, lädt OCEL/Log herunter via HTTPS")
+
+@enduml

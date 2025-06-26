@@ -1,0 +1,16 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(user, "Anwender", "Prozessanalyst, Student")
+
+System_Boundary(c1, "OCELConverter Microservice") {
+    Container(spa, "Single Page App", "HTML, CSS, JavaScript", "Stellt die Benutzeroberfläche zur Verfügung")
+    Container(api, "FastAPI Service", "Python, FastAPI", "Stellt API-Endpunkte bereit und führt die Konvertierungslogik aus")
+    ContainerDb(storage, "Temporärer Speicher", "In-Memory & Dateisystem", "Speichert Mapping-Konfigs im RAM und verarbeitet Dateien temporär")
+}
+
+Rel(user, spa, "Benutzt", "HTTPS")
+Rel(spa, api, "Macht API-Aufrufe", "HTTPS/JSON")
+Rel(api, storage, "Liest/Schreibt")
+
+@enduml

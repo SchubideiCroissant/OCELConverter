@@ -1,0 +1,59 @@
+:project_name: OCELConverter
+:author: Arthur Mehlgarten, Anne Panzer, Equal, Vincent Schick
+:revdate: {docdatetime}
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:numbered:
+
+= Soll-Ist-Analyse __{project_name}__
+
+== Abgrenzung des Funktionsumfangs
+Die Entwicklung des OCEL-Konverter Microservices orientiert sich an der ursprünglichen Aufgabenstellung, weicht jedoch in bestimmten Punkten bewusst ab, um den Fokus des Projekts zu schärfen und die Benutzerfreundlichkeit für die definierte Zielgruppe zu maximieren.
+
+* *Unterstützte Eingabeformate:* Im Gegensatz zur ursprünglichen Anforderung, sowohl CSV- als auch XES-Dateien zu unterstützen, konzentriert sich dieser Microservice ausschließlich auf die Verarbeitung von CSV-Dateien. Diese Entscheidung wurde getroffen, da CSV ein weit verbreitetes und einfach strukturiertes Format ist
+* *Filterfunktionen:* Auf die Implementierung expliziter Filtermechanismen während der Konvertierung wurde im aktuellen Entwicklungsstand verzichtet
+* *Ziel-Analysewerkzeug:* Während ursprünglich Kompatibilität mit ProM gefordert war, wurde die Entwicklung und das Testen auf das webbasierte Tool ocelot.pm ausgerichtet. Das erzeugte OCEL 2.0 JSON-Format folgt jedoch dem offiziellen Standard, was eine grundsätzliche Kompatibilität mit anderen OCEL-fähigen Werkzeugen erwarten lässt
+
+== Soll-Ist-Analyse
+Alle nachfolgenden Beschreibungen der funktionalen Anforderungen beziehen sich auf diesen definierten und implementierten Funktionsumfang.
+
+[cols="1,1,1,2", options="header"]
+|===
+|Anforderung
+|Soll (laut Aufgabenstellung)
+|Ist (implementierter Zustand)
+|Anmerkung / Begründung
+
+|Input-Format
+|CSV oder XES-Datei
+|Nur CSV-Dateien. Die Weboberfläche und die Verarbeitungslogik sind auf den CSV-Upload ausgelegt.
+|Abweichung: Die Unterstützung für XES wurde nicht implementiert. Die Begründung dafür könnte eine Fokussierung auf das für die Zielgruppe gängigere und einfachere CSV-Format im Rahmen des Projektumfangs sein.
+
+|Konfigurations-Input
+|JSON-File mit Konvertierungsoptionen
+|JSON-Eingabe über Textfelder in der Weboberfläche für "Mapping" und "Renaming".
+|Erfüllt (mit anderer Umsetzung): Die Konfiguration erfolgt per JSON, aber nutzerfreundlicher direkt im Browser statt über einen separaten Dateiupload.
+
+|Verarbeitung: Filterung
+|"Filterung gemäß den übermittelten Optionen"
+|Nicht implementiert. Es gibt keine explizite Filterfunktion (z.B. nach Datum, Aktivitätstyp). Die Verarbeitung bezieht sich auf die Umwandlung aller Zeilen der CSV-Datei.
+|Abweichung: Dieses Feature wurde ausgelassen. Es könnte als mögliche zukünftige Erweiterung im Projektdokument vermerkt werden.
+
+|Output: Zieldatei(en)
+|"Eine oder mehrere Process Event Dateien im Format OCEL 2.0"
+|Es wird genau eine OCEL 2.0 Datei mit dem Namen output.json erzeugt.
+|Teilweise erfüllt: Das System erzeugt eine valide OCEL 2.0-Datei, jedoch nicht mehrere. Die Anforderung "mehrere" war möglicherweise für Szenarien gedacht, in denen nach Attributen gefiltert und aufgeteilt wird.
+
+|Output: Log
+|"Rückgabe des Verarbeitungs-Logs"
+|Erfüllt. Es wird eine log.txt mit einer Zusammenfassung der Konvertierung erstellt und zum Download angeboten.
+|-
+
+|Kompatibilität
+|"PM-Tools wie ProM"
+|Das Zieltool ist explizit ocelot.pm.
+|Abweichung/Spezifizierung: Das Zielwerkzeug wurde auf eine leichtgewichtige, webbasierte Lösung (ocelot.pm) fokussiert. Da OCEL 2.0 ein Standard ist, ist eine Kompatibilität mit ProM (mit entsprechendem Plugin) dennoch wahrscheinlich, wurde aber nicht als primäres Ziel verfolgt.
+|===
+

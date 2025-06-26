@@ -1,0 +1,44 @@
+@startuml
+actor Anwender
+participant "Browser" as Web
+participant "main.py (API)" as API
+participant "Converter.py (Core)" as Core
+participant "Dateisystem" as FS
+
+Anwender -> Web: Wählt CSV-Datei aus und klickt "Hochladen"
+Web -> API: POST /upload (multipart/form-data)
+
+activate API
+API -> FS: Schreibt temporäre CSV-Datei
+API -> Core: read_events_from_csv(path)
+activate Core
+Core -> FS: Liest temporäre CSV-Datei
+return List[Dict]
+
+API -> Core: extract_events_and_objects(events)
+return events_output, objects_output
+
+API -> Core: build_ocel_json_structure(...)
+return ocel_json
+
+API -> Core: write_output_files(ocel_json, ...)
+activate Core
+Core -> FS: Schreibt output.json & log.txt
+deactivate Core
+
+return JSONResponse(success)
+deactivate API
+
+Web -> Anwender: Zeigt Erfolgsmeldung an
+
+... später ...
+
+Anwender -> Web: Klickt "Download JSON"
+Web -> API: GET /download/output
+activate API
+API -> FS: Liest output.json
+API -> Web: FileResponse
+deactivate API
+Web -> Anwender: Startet Download
+
+@enduml

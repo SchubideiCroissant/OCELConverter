@@ -1,0 +1,31 @@
+@startuml
+
+package "Converter.py" {
+    class "Global State" as State {
+        + mapping_data: Dict
+        + renaming_map: Dict
+    }
+
+    class "Functions" as Funcs {
+        + set_mapping(mapping: Dict)
+        + set_renaming(mapping: Dict)
+        + read_events_from_csv(file_path: str): List[Dict]
+        + extract_events_and_objects(event_list: List[Dict]): Tuple
+        + build_ocel_json_structure(events, objects, ...): Dict
+        + write_output_files(ocel_data: Dict, ...)
+    }
+}
+
+package "main.py" {
+    class "FastAPI Endpoints" as API {
+        POST /mapping
+        POST /renaming
+        POST /upload
+        GET /download/...
+    }
+}
+
+API ..> Funcs : calls
+Funcs ..> State : manipulates
+
+@enduml
